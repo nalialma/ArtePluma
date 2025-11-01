@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="María Escritora - Autora de novelas y cuentos. Descubre mis obras literarias, reflexiones sobre la escritura y accede a mis historias de ficción contemporánea.">
+    <meta name="keywords" content="escritora, autora, novelas, cuentos, literatura, ficción, narrativa, blog literario, María Escritora">
+    <meta name="author" content="María Escritora">
+    <meta property="og:title" content="María Escritora - Autora de Novelas y Cuentos">
+    <meta property="og:description" content="Descubre las novelas, cuentos y reflexiones literarias de María Escritora. Autora de ficción contemporánea y narrativa emocional.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6B4C3A">
+    <link rel="canonical" href="https://mariaescritora.com">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='70' font-size='80' text-anchor='middle' fill='%236B4C3A'>📖</text></svg>">
+    
+    <title>María Escritora - Autora de Novelas y Cuentos | Literatura Contemporánea</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6B4C3A;
+            --secondary: #A67C52;
+            --accent: #D4A574;
+            --light: #F5F1ED;
+            --white: #FFFFFF;
+            --dark: #2C2416;
+            --gradient1: linear-gradient(135deg, #6B4C3A 0%, #A67C52 100%);
+            --gradient2: linear-gradient(135deg, #2C2416 0%, #6B4C3A 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* ============ SPLASH SCREEN ============ */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--gradient2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            animation: fadeOutSplash 0.8s ease-in-out 2.5s forwards;
+        }
+
+        @keyframes fadeOutSplash {
+            from {
+                opacity: 1;
+                visibility: visible;
+            }
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .splash-content {
+            text-align: center;
+            animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .splash-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 0.8s ease-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .splash-title {
+            font-size: 2.2rem;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            animation: slideInDown 0.8s ease-out 0.2s both;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .splash-subtitle {
+            font-size: 1rem;
+            color: #FFF;
+            font-weight: 300;
+            animation: slideInUp 0.8s ease-out 0.4s both;
+            font-style: italic;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* ============ HEADER ============ */
+        header {
+            background: var(--white);
+            border-bottom: 2px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(107, 76, 58, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: var(--white);
+                padding: 2rem;
+                gap: 1rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                border-bottom: 2px solid var(--primary);
+            }
+
+            .nav-links.active {
+                max-height: 500px;
+            }
+        }
+
+        /* ============ ANIMATED BANNER ============ */
+        .animated-banner {
+            background: var(--primary);
+            color: var(--accent);
+            padding: 1rem 0;
+            overflow: hidden;
+            position: relative;
+            font-weight: 400;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .banner-content {
+            display: flex;
+            animation: scroll 25s linear infinite;
+        }
+
+        .banner-text {
+            white-space: nowrap;
+            padding: 0 2rem;
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--light);
+        }
+
+        /* Formas abstractas de fondo */
+        .abstract-shape {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.08;
+        }
+
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            top: -100px;
+            right: -100px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--secondary);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            bottom: -50px;
+            left: -50px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -1px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .hero-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(107, 76, 58, 0.2);
+            transition: transform 0.4s ease;
+            border: 3px solid var(--accent);
+        }
+
+        .hero-image:hover {
+            transform: translateY(-10px);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-image-1 {
+            grid-row: 1 / 3;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradient1);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(107, 76, 58, 0.3);
+        }
+
+        /* ============ CARRUSEL ============ */
+        .books-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-item {
+            flex: 0 0 calc(33.333% - 1.4rem);
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+
+        .carousel-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(107, 76, 58, 0.2);
+        }
+
+        .carousel-item-image {
+            width: 100%;
+            height: 280px;
+            background: var(--gradient1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .carousel-item-content {
+            padding: 1.5rem;
+        }
+
+        .carousel-item-content h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .carousel-item-content p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .carousel-year {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 1rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item {
+                flex: 0 0 calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-item {
+                flex: 0 0 100%;
+            }
+        }
+
+        /* ============ ABOUT SECTION ============ */
+        .about-section {
+            background: var(--white);
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .author-image {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            background: var(--gradient1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            margin: 0 auto;
+            border: 3px solid var(--accent);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* ============ CONTACT SECTION ============ */
+        .contact-section {
+            background: var(--gradient2);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .contact-btn {
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-btn.whatsapp {
+            background: #25D366;
+            border-color: #25D366;
+            color: white;
+        }
+
+        /* ============ SOCIAL LINKS ============ */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-images {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image-1 {
+                grid-row: auto;
+            }
+
+            .hero-image {
+                height: 250px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .animated-banner {
+                font-size: 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        /* ============ UTILITIES ============ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 4rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-icon">📖</div>
+            <h1 class="splash-title">MARÍA ESCRITORA</h1>
+            <p class="splash-subtitle">Historias que transforman almas</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <span class="logo-icon">📖</span>
+                MARÍA
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#obras">Obras</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Animated Banner -->
+    <div class="animated-banner">
+        <div class="banner-content">
+            <div class="banner-text">✨ Las palabras cobran vida en cada página ✨</div>
+            <div class="banner-text">✨ Las palabras cobran vida en cada página ✨</div>
+            <div class="banner-text">✨ Las palabras cobran vida en cada página ✨</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="abstract-shape shape-1"></div>
+        <div class="abstract-shape shape-2"></div>
+
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Bienvenido a Mi Mundo Literario</h1>
+                <p>Historias que transforman almas, personajes que quedan en tu corazón y narrativas que despierten tus emociones más profundas. Cada palabra es una puerta hacia mundos infinitos.</p>
+                <a href="#obras" class="btn">📚 Descubre Mis Obras</a>
+            </div>
+
+            <div class="hero-images">
+                <img src="https://images.unsplash.com/photo-1507842217343-583f20270319?w=500&h=700&fit=crop" alt="Novelas y cuentos literarios de María Escritora" class="hero-image hero-image-1">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500&h=320&fit=crop" alt="Escritura creativa y narrativa contemporánea" class="hero-image">
+                <img src="https://images.unsplash.com/photo-1507842217343-583f20270319?w=500&h=320&fit=crop" alt="Reflexiones literarias sobre la escritura" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Carousel -->
+    <section class="books-section" id="obras">
+        <h2 class="section-title">Mis Obras Publicadas</h2>
+        <p class="section-subtitle">Novelas, cuentos y reflexiones que han tocado miles de corazones</p>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Obra 1 -->
+                <div class="carousel-item">
+                    <div class="carousel-item-image">📖</div>
+                    <div class="carousel-item-content">
+                        <h3>Entre Sueños y Realidad</h3>
+                        <p>Una novela que explora los límites entre lo que soñamos y lo que vivimos. Personajes profundos en búsqueda de su identidad en un mundo cambiante.</p>
+                        <div class="carousel-year">2021 • 320 páginas</div>
+                    </div>
+                </div>
+
+                <!-- Obra 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-item-image">✨</div>
+                    <div class="carousel-item-content">
+                        <h3>Noches de Tinta</h3>
+                        <p>Una colección de cuentos cortos que capturan los momentos más íntimos de la vida. Historias de amor, pérdida y redención que tocan el alma.</p>
+                        <div class="carousel-year">2022 • 256 páginas</div>
+                    </div>
+                </div>
+
+                <!-- Obra 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-item-image">🌙</div>
+                    <div class="carousel-item-content">
+                        <h3>El Jardín de las Palabras</h3>
+                        <p>Reflexiones profundas sobre el proceso creativo, la inspiración y el poder transformador de la narrativa. Una guía literaria para escritores.</p>
+                        <div class="carousel-year">2023 • 288 páginas</div>
+                    </div>
+                </div>
+
+                <!-- Obra 4 -->
+                <div class="carousel-item">
+                    <div class="carousel-item-image">💫</div>
+                    <div class="carousel-item-content">
+                        <h3>Corazones de Papel</h3>
+                        <p>Una novela épica sobre familias, secretos guardados y el poder del perdón. Viaja a través de generaciones descubriendo verdades ocultas.</p>
+                        <div class="carousel-year">2024 • 420 páginas</div>
+                    </div>
+                </div>
+
+                <!-- Obra 5 -->
+                <div class="carousel-item">
+                    <div class="carousel-item-image">🎭</div>
+                    <div class="carousel-item-content">
+                        <h3>Voces en la Penumbra</h3>
+                        <p>Historias paralelas de mujeres extraordinarias. Narrativa múltiple que teje destinos entrelazados por el tiempo y la magia de la conexión.</p>
+                        <div class="carousel-year">2024 • 356 páginas</div>
+                    </div>
+                </div>
+
+                <!-- Obra 6 -->
+                <div class="carousel-item">
+                    <div class="carousel-item-image">📚</div>
+                    <div class="carousel-item-content">
+                        <h3>Letras que Vuelan</h3>
+                        <p>Ensayos y reflexiones sobre la literatura mundial, escritores que inspiraron mi carrera y el impacto de la lectura en nuestras vidas.</p>
+                        <div class="carousel-year">2024 • 224 páginas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn">❮</button>
+            <button class="carousel-btn" id="nextBtn">❯</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre-mi">
+        <div class="about-content">
+            <div class="author-image">ME</div>
+            <div>
+                <h2>Sobre Mí</h2>
+                <p>Soy María, una apasionada de las letras con más de 15 años dedicada a la escritura creativa. Mi viaje comenzó en la infancia, entre las páginas de libros que devoraba con avidez, descubriendo mundos infinitos a través de la narrativa.</p>
+                <p>A lo largo de mi carrera, he publicado cinco novelas, dos colecciones de cuentos y numerosos ensayos literarios. Mi estilo se caracteriza por la profundidad emocional de mis personajes y la capacidad de transportar al lector a mundos llenos de magia y realismo entrelazados.</p>
+                <p>Cuando no estoy escribiendo, disfruto de largas caminatas por la naturaleza, la fotografía y, por supuesto, la lectura voraz. Creo firmemente que cada historia tiene el poder de cambiar vidas, transformar perspectivas y es mi misión compartir ese poder transformador con el mundo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container text-center">
+            <h2>Conecta Conmigo</h2>
+            <p>¿Tienes preguntas sobre mis obras? ¿Deseas colaborar? Estoy aquí para hablar sobre literatura y crear..</p>
+
+            <div class="contact-buttons">
+                <a href="https://wa.me/573001234567?text=Hola%20María%20Escritora%20Me%20interesa%20conocer%20más%20sobre%20tus%20obras" target="_blank" class="contact-btn whatsapp">
+                    💬 WhatsApp
+                </a>
+                <a href="tel:+573001234567" class="contact-btn">
+                    📞 Llamar
+                </a>
+                <a href="mailto:maria@mariaescritora.com" class="contact-btn">
+                    ✉️ Email
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://facebook.com/mariaescritora" target="_blank" class="social-link" aria-label="Facebook">f</a>
+                <a href="https://instagram.com/mariaescritora" target="_blank" class="social-link" aria-label="Instagram">📷</a>
+                <a href="https://tiktok.com/@mariaescritora" target="_blank" class="social-link" aria-label="TikTok">🎵</a>
+                <a href="https://youtube.com/@mariaescritora" target="_blank" class="social-link" aria-label="YouTube">📺</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 María Escritora. Todos los derechos reservados.</p>
+        <p>Autora de Novelas • Cuentista • Ensayista Literario</p>
+    </footer>
+
+    <script>
+        // Splash screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.splash-screen').style.opacity = '0';
+                document.querySelector('.splash-screen').style.pointerEvents = 'none';
+            }, 2500);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Carrusel
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentTranslate = 0;
+        const itemWidth = 100 / 3; // 3 items visible
+
+        function updateCarousel() {
+            track.style.transform = `translateX(${currentTranslate}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const maxTranslate = -(track.children.length - 3) * itemWidth;
+            if (currentTranslate > maxTranslate) {
+                currentTranslate -= itemWidth;
+                updateCarousel();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentTranslate < 0) {
+                currentTranslate += itemWidth;
+                updateCarousel();
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Animated banner scroll
+        const bannerContent = document.querySelector('.banner-content');
+        setInterval(() => {
+            const firstChild = bannerContent.children[0];
+            bannerContent.style.animation = 'none';
+            setTimeout(() => {
+                bannerContent.appendChild(firstChild);
+                bannerContent.style.animation = 'scroll 25s linear infinite';
+            }, 10);
+        }, 25000);
+    </script>
+</body>
+</html>
